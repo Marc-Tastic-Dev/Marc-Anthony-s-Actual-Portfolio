@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Soul Drip - Portfolio</title>
+    <link rel="stylesheet" href="terminal-soul-drip.css">
+    <style>
+        /* Sidebar Layout CSS - Improved spacing and density */
+        .portfolio-layout {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            width: 240px;
+            background-color: var(--bg-secondary);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 1.5rem 1rem;
+            border-right: 1px solid var(--fg-muted);
+        }
+        
+        .sidebar-nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        
+        .sidebar-nav li {
+            margin-bottom: 0.25rem;
+        }
+        
+        .sidebar-nav a {
+            display: block;
+            padding: 0.4rem 0;
+            color: var(--fg-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: var(--font-weight-bold);
+            font-size: 0.9em;
+        }
+        
+        .sidebar-nav a:hover {
+            color: var(--accent-yellow);
+            border-bottom-color: var(--accent-yellow);
+        }
+        
+        .sidebar-nav a.active {
+            color: var(--accent-orange);
+            border-bottom-color: var(--accent-orange);
+        }
+        
+        .main-content {
+            flex: 1;
+            margin-left: 240px;
+            padding: 1.5rem 2rem;
+            max-width: calc(100% - 240px);
+        }
+        
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .section h1 {
+            margin-bottom: 0.75rem;
+        }
+        
+        .section h2 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .section h3 {
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .section p {
+            margin-bottom: 0.75rem;
+        }
+        
+        .section ul {
+            margin-bottom: 0.75rem;
+        }
+        
+        .section li {
+            margin-bottom: 0.25rem;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .project-card {
+            background-color: var(--bg-secondary);
+            padding: 1.25rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--accent-orange);
+        }
+        
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        
+        .project-card p {
+            margin-bottom: 0.75rem;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-tag {
+            background-color: var(--bg-code);
+            color: var(--accent-yellow);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .terminal-output {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar .terminal-output {
+            margin-top: 0.75rem;
+            padding: 0.75rem;
+            font-size: 0.8em;
+        }
+        
+        blockquote {
+            margin: 1rem 0;
+        }
+        
+        pre {
+            margin-bottom: 0.75rem;
+        }
+        
+        button {
+            margin-top: 1rem;
+        }
+        
+        /* Tighter line height for better density */
+        body {
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+                padding: 1rem 0.75rem;
+            }
+            
+            .main-content {
+                margin-left: 200px;
+                max-width: calc(100% - 200px);
+                padding: 1rem 1.5rem;
+            }
+            
+            .section {
+                margin-bottom: 2rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .portfolio-layout {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 1rem;
+            }
+            
+            .sidebar-nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+            
+            .main-content {
+                margin-left: 0;
+                max-width: 100%;
+                padding: 1rem;
+            }
+            
+            .section {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-layout">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <h3 class="text-accent">~/dev/portfolio</h3>
+            <ul class="sidebar-nav">
+                <li><a href="#home" class="active">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+            
+            <div style="margin-top: 1.5rem;">
+                <div class="terminal-prompt">whoami</div>
+                <div class="terminal-output">12yr_fullstack_dev
+status: building_the_future
+stack: raw_html_css_js
+tools: deno_fresh_swift
+vibe: terminal_soul_drip</div>
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <section id="home" class="section">
+                <h1>welcome to my digital cave</h1>
+                <p>12-year-old full-stack developer who believes in <strong class="text-accent">raw power</strong> over bloated frameworks.</p>
+                <p>I build with <code>HTML/CSS/JS</code>, <code>Swift</code>, and <code>Deno+Fresh</code> because I want total control over my code.</p>
+                <p class="text-muted">// no frameworks, no fluff, just pure terminal energy</p>
+            </section>
+            
+            <section id="about" class="section">
+                <h2>about.exe</h2>
+                <p>I'm a <span class="text-orange bold">terminal-powered developer</span> who lives in the command line. My stack is lightweight, native-focused, and built for speed.</p>
+                
+                <h3>my setup</h3>
+                <ul>
+                    <li><strong>Terminal:</strong> Warp (with Terminal Soul Drip theme)</li>
+                    <li><strong>Tools:</strong> Raycast, Helium, Obsidian, Anytype</li>
+                    <li><strong>Languages:</strong> JavaScript, Swift, HTML/CSS</li>
+                    <li><strong>Runtime:</strong> Deno + Fresh framework</li>
+                </ul>
+                
+                <blockquote>
+                    "Code should be fast, clean, and give you complete control. No magic, no abstractions you don't understand."
+                </blockquote>
+            </section>
+            
+            <section id="projects" class="section">
+                <h2>projects/</h2>
+                <p class="text-muted">// some things i've built in my digital cave</p>
+                
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>terminal-soul-drip</h3>
+                        <p>A hyper-fast dark theme for developers who live in the terminal. Inspired by Gruvbox with that 1997 hacker bunker energy.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">css</span>
+                            <span class="skill-tag">theme</span>
+                            <span class="skill-tag">terminal</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>swift-native-app</h3>
+                        <p>Native iOS app built with pure Swift. No third-party dependencies, just clean, performant code that does exactly what it needs to.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">swift</span>
+                            <span class="skill-tag">ios</span>
+                            <span class="skill-tag">native</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>deno-fresh-site</h3>
+                        <p>Lightning-fast web app using Deno and Fresh. Server-side rendering with islands architecture for optimal performance.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">deno</span>
+                            <span class="skill-tag">fresh</span>
+                            <span class="skill-tag">typescript</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>raw-html-portfolio</h3>
+                        <p>This portfolio site - built with raw HTML, CSS, and JavaScript. No build process, no frameworks, just pure web fundamentals.</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">html</span>
+                            <span class="skill-tag">css</span>
+                            <span class="skill-tag">vanilla-js</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="skills" class="section">
+                <h2>skills.json</h2>
+                <p class="text-muted">// my technical arsenal</p>
+                
+                <h3>languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">javascript</span>
+                    <span class="skill-tag">typescript</span>
+                    <span class="skill-tag">swift</span>
+                    <span class="skill-tag">html</span>
+                    <span class="skill-tag">css</span>
+                </div>
+                
+                <h3>runtime & frameworks</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">deno</span>
+                    <span class="skill-tag">fresh</span>
+                    <span class="skill-tag">node.js</span>
+                    <span class="skill-tag">swiftui</span>
+                </div>
+                
+                <h3>tools & environment</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">warp</span>
+                    <span class="skill-tag">raycast</span>
+                    <span class="skill-tag">obsidian</span>
+                    <span class="skill-tag">git</span>
+                    <span class="skill-tag">vim</span>
+                </div>
+                
+                <pre><code>const philosophy = {
+  frameworks: "avoid when possible",
+  dependencies: "keep minimal",
+  performance: "always priority",
+  control: "maximum",
+  style: "terminal_soul_drip"
+};</code></pre>
+            </section>
+            
+            <section id="contact" class="section">
+                <h2>contact.sh</h2>
+                <p class="text-muted">// let's build something amazing together</p>
+                
+                <p>Want to collaborate on a project or just chat about code? I'm always excited to connect with fellow developers who appreciate clean, fast, and purposeful code.</p>
+                
+                <div class="terminal-output">
+$ echo "reach out through these channels:"
+
+> email: marcanthonymputela@icloud.com
+> github: github.com/Marc-Tastic-Dev
+
+$ echo "currently working on:"
+> building native iOS apps with Swift
+> exploring Deno's latest features
+> crafting minimal, performant web experiences
+> contributing to open-source terminal tools</div>
+                
+                <button onclick="alert('Thanks for visiting my digital cave! 🚀')">
+                    ping me
+                </button>
+            </section>
+        </main>
+    </div>
+    
+    <script>
+        // Simple scroll spy for active nav links
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.sidebar-nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scrolling for nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
