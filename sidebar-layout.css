@@ -1,4 +1,4 @@
-THIS SHOULD BE A LINTER ERROR/* Sidebar Layout CSS - Enhanced with modern features and accessibility */
+/* Sidebar Layout CSS - Enhanced with modern features and accessibility */
 
 /* Layout Foundation */
 .portfolio-layout {
@@ -607,6 +607,81 @@ THIS SHOULD BE A LINTER ERROR/* Sidebar Layout CSS - Enhanced with modern featur
     .nav-link::before {
         display: none;
     }
+}
+
+/* Animation Classes for JavaScript Integration */
+.animate-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Copy Status Styling */
+.copy-success {
+    position: absolute !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0.5rem 1rem !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: nowrap !important;
+    border: 1px solid var(--accent-green) !important;
+    background: var(--bg-secondary) !important;
+    color: var(--accent-green) !important;
+    border-radius: 4px !important;
+    font-size: 0.9rem !important;
+    top: 100% !important;
+    left: 0 !important;
+    z-index: 1000 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.copy-error {
+    position: absolute !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0.5rem 1rem !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: nowrap !important;
+    border: 1px solid var(--accent-red) !important;
+    background: var(--bg-secondary) !important;
+    color: var(--accent-red) !important;
+    border-radius: 4px !important;
+    font-size: 0.9rem !important;
+    top: 100% !important;
+    left: 0 !important;
+    z-index: 1000 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Scrolled State */
+body.scrolled .sidebar {
+    backdrop-filter: blur(12px);
+    background: linear-gradient(135deg, rgba(60, 56, 54, 0.95) 0%, rgba(53, 51, 40, 0.95) 100%);
+}
+
+/* Focus Indicators */
+.nav-link:focus-visible {
+    outline: 2px solid var(--accent-yellow);
+    outline-offset: 2px;
+}
+
+.primary-button:focus-visible,
+.secondary-button:focus-visible {
+    outline: 2px solid var(--accent-yellow);
+    outline-offset: 2px;
 }
 
 /* Dark mode enhancements */
